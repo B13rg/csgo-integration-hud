@@ -1,6 +1,7 @@
 #CSGO HUD GameState Integration
-
-https://www.youtube.com/watch?v=FM1-iapbEtc
+Tutorials:
+https://www.youtube.com/watch?v=FM1-iapbEtc (English)
+(Polish) Comming soon
 
 # Install 
 
