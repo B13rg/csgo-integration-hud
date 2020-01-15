@@ -95,24 +95,27 @@ function applyString(clazz, text){
 function updateState(){
     var state = json.player.state;
     applyString(".health", state.health+"/100");
-    var text = "A: "+state.armor;
+    var text = state.armor.toString();
     if (state.helmet){
         text += "H"
     }
-    applyString(".armor", state.armor);
-    applyString(".round_kills", state.round_kills);
-    applyString(".round_killhs", state.round_killhs);
-    applyString(".money", "$"+state.money);
-    applyString(".equip_value", "$"+state.equip_value);
+    applyString(".armor", text);
+    applyString(".round_kills", state.round_kills.toString());
+    applyString(".round_killhs", state.round_killhs.toString());
+    applyString(".rKillStat", [state.round_kills,state.round_killhs].join("/"));
+    applyString(".money", "$"+state.money.toString());
+    applyString(".round_dmg", state.round_totaldmg.toString());
+    applyString(".equip_value", "$"+state.equip_value.toString());
 }
 
 function updateStats(){
-    var stats = json.player.match_stats;
-    applyString(".kills", state.kills);
-    applyString(".assists", state.assists);
-    applyString(".deaths", state.deaths);
-    applyString(".mvps", state.mvps);
-    applyString(".score", state.score);
+    var state = json.player.match_stats;
+    applyString(".kills", state.kills.toString());
+    applyString(".assists", state.assists.toString());
+    applyString(".deaths", state.deaths.toString());
+    applyString(".mvps", state.mvps.toString());
+    applyString(".scoreplain", state.score.toString());
+    applyString(".kdas", [state.kills,state.deaths,state.assists].join("/"))
 }
 
 
@@ -163,7 +166,7 @@ function updateWeapons() {
 var flashing = false;
 
 function tick() {
-    if (typeof json.extra == "undefined") return;
+    //if (typeof json.extra == "undefined") return;
 
     var btime = json.extra.round.bomb.maxTime - parseInt(new Date().getTime() / 1000 - bombtime);
     var rtime = json.extra.round.maxTime - parseInt(new Date().getTime() / 1000 - roundtime);

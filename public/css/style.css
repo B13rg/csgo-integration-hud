@@ -7,7 +7,10 @@ html, body{
 }
 
 .score-wrap {
-    
+    font-size: 1.5em;
+    position: relative;
+    margin: auto;
+    text-align: center;
 }
 
 .score {
@@ -26,6 +29,24 @@ html, body{
     height: 100%;
 }
 
+.right {
+    text-align: right;
+}
+
+.ptablestat {
+    font-size: 1.5em;
+    position: relative;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.prow {
+    font-size: 1.5em;
+    border: 1px solid black;
+}
+
 .color {
     position: fixed;
     width: 100%;
@@ -39,8 +60,6 @@ html, body{
     margin: auto;
     text-align: center;
 }
-
-
 
 .timelabel {
     font-size: 1.3em;
@@ -64,7 +83,7 @@ html, body{
 }
 
 .name {
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .knife td.pic img{
