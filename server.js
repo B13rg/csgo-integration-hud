@@ -2,8 +2,8 @@
     fs = require('fs');
 
     var version = "1.0.0";
-    var csgoport = 3000;
-    var webport = 2626;
+    var csgoport = 8383;
+    var webport = 8282;
 
     var app = require('express')();
     var express = require('http').Server(app);
@@ -17,6 +17,10 @@
 
     app.get('/', function(req, res) {
         res.render('index');
+    });
+
+    app.get('/player',function(req, res) {
+        res.render('player');
     });
 
     app.get('/main.js', function(req, res) {
@@ -48,7 +52,7 @@
                 body += data;
             });
             req.on('end', function() {
-                //console.log("POST payload: " + body);
+                console.log("POST payload: " + body);
                 update(JSON.parse(body));
                 res.end('');
             });

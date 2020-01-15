@@ -77,12 +77,43 @@ io.on("update", function(status) {
     bombtime = json.extra.round.bomb.timestart;
 
     updateWeapons();
+    updateState();
+    updateStats();
 
     if(!tickinterval) {
-        tickinterval = setInterval(tick, 300);
+        tickinterval = setInterval(tick, 100);
     }
 
 });
+
+function applyString(clazz, text){
+    $(clazz).html(text);
+}
+
+
+
+function updateState(){
+    var state = json.player.state;
+    applyString(".health", state.health+"/100");
+    var text = "A: "+state.armor;
+    if (state.helmet){
+        text += "H"
+    }
+    applyString(".armor", state.armor);
+    applyString(".round_kills", state.round_kills);
+    applyString(".round_killhs", state.round_killhs);
+    applyString(".money", "$"+state.money);
+    applyString(".equip_value", "$"+state.equip_value);
+}
+
+function updateStats(){
+    var stats = json.player.match_stats;
+    applyString(".kills", state.kills);
+    applyString(".assists", state.assists);
+    applyString(".deaths", state.deaths);
+    applyString(".mvps", state.mvps);
+    applyString(".score", state.score);
+}
 
 
 function updateWeapons() {
