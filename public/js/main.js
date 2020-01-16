@@ -78,7 +78,9 @@ io.on("update", function(status) {
 
     updateWeapons();
     updateState();
-    updateStats();
+    if (json.player.activity != "gameover") {
+        updateStats();
+    }
 
     if(!tickinterval) {
         tickinterval = setInterval(tick, 100);
@@ -104,7 +106,7 @@ function updateState(){
     applyString(".round_killhs", state.round_killhs.toString());
     applyString(".rKillStat", [state.round_kills,state.round_killhs].join("/"));
     applyString(".money", "$"+state.money.toString());
-    applyString(".round_dmg", state.round_totaldmg.toString());
+    //applyString(".round_dmg", state.round_totaldmg.toString());
     applyString(".equip_value", "$"+state.equip_value.toString());
 }
 
