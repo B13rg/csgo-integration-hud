@@ -117,7 +117,7 @@ function updateStats(){
     applyString(".deaths", state.deaths.toString());
     applyString(".mvps", state.mvps.toString());
     applyString(".scoreplain", state.score.toString());
-    applyString(".kdas", [state.kills,state.deaths,state.assists].join("/"))
+    applyString(".kdas", [state.kills,state.assists,state.deaths].join("/"))
 }
 
 
