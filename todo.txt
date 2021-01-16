@@ -1,0 +1,7 @@
+
+
+* create a complete overlay screen at a settable aspect ratio
+* increase overlay information during pre-round time
+	* include money delta from last round, possibly weapon change
+	* previous round stats
+
