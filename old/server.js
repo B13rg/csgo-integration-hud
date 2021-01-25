@@ -23,12 +23,36 @@
         res.render('player');
     });
 
-    app.get('/main.js', function(req, res) {
+    app.get('/player_bar',function(req, res) {
+        res.render('player_bar');
+    });
+
+    app.get('/js/main.js', function(req, res) {
         res.sendFile(__dirname +'/public/js/main.js');
     });
 
-    app.get('/style.css', function(req, res) {
+    app.get('/js/jquery-2.1.4.min.js', function(req, res) {
+        res.sendFile(__dirname +'/public/js/jquery-2.1.4.min.js');
+    });
+
+    app.get('/js/socket.io-1.3.7.js', function(req, res) {
+        res.sendFile(__dirname +'/public/js/socket.io-1.3.7.js');
+    });
+
+    app.get('/css/style.css', function(req, res) {
         res.sendFile(__dirname +'/public/css/style.css');
+    });
+
+    app.get('/normalize.css', function(req, res) {
+        res.sendFile(__dirname +'/public/css/normalize.css');
+    });
+
+    app.get('/css/skeleton.css', function(req, res) {
+        res.sendFile(__dirname +'/public/css/skeleton.css');
+    });
+
+    app.get('/css/color.css', function(req, res) {
+        res.sendFile(__dirname +'/public/css/boostrap4Color.css');
     });
 
     io.on('connection', function(socket) {
