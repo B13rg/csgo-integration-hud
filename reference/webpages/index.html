@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebSocket demo</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="dataConnection.js"></script>
+</head>
+
+<body>
+    <table class="scoreboard" class="score">
+        <tr>
+            <th class="ctText">CT</th>
+            <th class="ctBkg" class="scoreCT"></th>
+            <th class="tBkg" class="scoreT"></th>
+            <th class="tText">T</th>
+        </tr>
+    </table>
+
+    <h3>Player Data</h3>
+    <table class="player scoreboard" class="matchData team">
+        <tr>
+            <td rowspan="2" class="health" style="width: 2em;">55</td>
+            <td rowspan="2" class="armor" style="width: 2em;">123</td>
+            <td rowspan="2" class="round_kills" style="width: 2em;">2</td>
+            <td style="width: 1.5em;">K</td>
+            <td style="width: 1.5em;">A</td>
+            <td style="width: 1.5em;">D</td>
+            <td>MVPs</td>
+            <td>Score</td>
+        </tr>
+        <tr>
+            <td class="kills">2</td>
+            <td class="assists">23</td>
+            <td class="deaths">12</td>
+            <td class="mvps">4</td>
+            <td class="score">123</td>
+        </tr>
+    </table>
+
+    <tr>
+        <td>Helmet</td>
+        <td class="helmet">0</td>
+    </tr>
+    <tr>
+        <td>Money</td>
+        <td class="money">0</td>
+    </tr>
+    <tr>
+        <td>Rnd. Kills</td>
+        <td class="round_kills">0</td>
+    </tr>
+    <tr>
+        <td>Rnd. HS Kills</td>
+        <td class="round_killhs">0</td>
+    </tr>
+    <tr>
+        <td>Rnd. Damage</td>
+        <td class="round_totaldmg">0</td>
+    </tr>
+    <tr>
+        <td>Equipment Value</td>
+        <td class="equip_value">0</td>
+    </tr>
+    <tr>
+        <td>Position</td>
+        <td class="position">0</td>
+    </tr>
+    </table>
+
+    <h3>Round Data</h3>
+    <table class="matchData">
+        <tr>
+            <th>Round Number</th>
+            <th class="roundNum">0</th>
+        </tr>
+        <tr>
+            <td>Phase</td>
+            <td class="phase">0</td>
+        </tr>
+        <tr>
+            <td>Phase Time Left</td>
+            <td class="phaseTime">0</td>
+        </tr>
+    </table>
+
+    <h3>Match Data</h3>
+    <table class="matchData">
+        <tr>
+            <th>Mode</th>
+            <th class="mode">0</th>
+        </tr>
+        <tr>
+            <td>Map Name</td>
+            <td class="mapName">0</td>
+        </tr>
+        <tr>
+            <td>Phase</td>
+            <td class="phase">0</td>
+        </tr>
+        <tr>
+            <td>Timestamp</td>
+            <td class="timestamp">0</td>
+        </tr>
+        <tr>
+            <td>Timestamp</td>
+            <td class="timestamp">0</td>
+        </tr>
+    </table>
+
+    <div class="dump"></div>
+
+</body>
+
+</html>

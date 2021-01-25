@@ -1,23 +1,25 @@
-# CSGO HUD GameState Integration
+# CS:GO Gamestate integration hud
 
+Provides a stream overlay from data from CSGO gamestate integration.
 
+Can be used for streaming solo play and spectated matches.
 
+## Setup and Installation
 
-* Tutorials:
-* https://www.youtube.com/watch?v=FM1-iapbEtc (English)
-* (Polish) Comming soon
+### Gamestate server
 
-## Install 
+Written in python
 
-* If you have GIT, you can use `git clone https://github.com/Mimc14/csgo-integration-hud.git` to download the project. Otherwise, Click the Download Zip button above
-* Install Node.JS (NPM is included)
-* Create a file named `gamestate_integration_hud.cfg` in your csgo cfg folder (`steamapps/common/Counter-Strike Global Offensive/csgo/cfg/`) copy-paste from https://gist.github.com/Mimc14/8e3cd5761bf1d3649f9afc670915a1a9
-* open CMD, type: cd \where\you\extracted\the\zip\csgo-integration-hud
-* in CMD: `npm install`
-* in CMD: `node server.js`
-* You should then be able to connect in a web browser by going to `http://localhost:2626`. Start up your game and connect to a match and data should begin streaming
-* Linux and Mac setup is basically identical, just switch out CMD for Terminal
+Start with `python gamereader.py`
 
+Will be able to reacieve gamestate integration info from the game, and forward it to websockets created on localhost port 5678.
 
+### Overlay Webpage
 
+Located in the `react/csgo-gsi` folder.
 
+Install dependencies with `npm i`
+
+Start server with `npm start`.
+
+Will host a webpage on localhost:3000, showing game state info.
