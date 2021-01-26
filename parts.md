@@ -4,6 +4,10 @@ Scoreboards
 
 * customize colors (config or color picker)
 * set "Alpha" color
+* Generate sets of stats after the match that would be shown on "analysts" desk (auto-generate graphs etc?)
+* Homepage with links to each, place to set settings for everything
+  * Default team names, random team names
+  * color scheme
 
 # Parts
 
