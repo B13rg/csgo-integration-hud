@@ -2,6 +2,7 @@ import React from "react";
 import logo from './logo.svg';
 import './App.css';
 import WebSocketComponent from "./components/WebSocketComponent";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import MatchScore from './components/MatchScore.js'
 import PlayerCard from './components/PlayerCard.js'
@@ -10,7 +11,14 @@ import PlayerCard from './components/PlayerCard.js'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Router>
+        <Switch>
+          <Route path="/matchscore" exact component={() => <MatchScore />} />
+          <Route path="/playercard" exact component={() => <PlayerCard />} />
+          <Route path="/" exact component={() => <PlayerCard />} />
+        </Switch>
+      </Router>
+      {/* <header className="App-header">
         <div class="container">
           <div class="row">
           <MatchScore></MatchScore>
@@ -23,7 +31,7 @@ function App() {
             <div class="col-5"></div>
           </div>
         </div>
-      </header>
+      </header> */}
     </div>
   );
 }

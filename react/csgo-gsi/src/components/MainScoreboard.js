@@ -31,7 +31,7 @@ class MainScoreboard extends React.Component {
 								{/* CT Team Name */}
 								TEAM CT
 							</div>
-							<div class="col-sm-1 color-ct-side">
+							<div class="col-sm-1 color-ct-side h1">
 								{/* CT Team Score */}
 								14
 							</div>
@@ -39,7 +39,7 @@ class MainScoreboard extends React.Component {
 								{/* Round Time */}
 								2:34
 							</div>
-							<div class="col-sm-1 color-t-side">
+							<div class="col-sm-1 color-t-side h1">
 								{/* T Team Score */}
 								15
 							</div>
@@ -60,7 +60,7 @@ class MainScoreboard extends React.Component {
 								</div>
 								<div class="col-sm-6 color-scoreboard-plain text-center align-self-center">
 									{/* Round Number */}
-									23/20
+									 Round 23/20
 								</div>
 								<div class="col-sm-3 color-scoreboard-plain">
 									{/* Series Score CT */}
