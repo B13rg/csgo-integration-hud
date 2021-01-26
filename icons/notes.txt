@@ -1,0 +1,4 @@
+
+extract images with `swfextract --outputformat "extract_%06d.%s" -p 5,28-64,66-200,209,270,281,289-292,574,577,580,584,587,590,595,598,633,636,639,646,664,680,685,728,733,786,789,792 iconlib.swf`
+
+Pulled from csgo install folder: `SteamLibrary\steamapps\common\Counter-Strike Global Offensive\csgo\resource\flash`
