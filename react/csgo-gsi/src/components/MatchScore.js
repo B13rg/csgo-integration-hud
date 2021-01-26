@@ -17,10 +17,54 @@ import '../css/bootstrap-theme.css'
 /////////////////////////////////////////////////////////
 class MatchScore extends React.Component {
 
-	render() {
-		const progress_bar_percent = {
-			width: '80%'
+	teamName(props) {
+		return (
+			<div class="h-100 h2 teamtitle">
+				TEAM { props.team }
+			</div>
+		)
+	}
+
+	teamScore(props) {
+		var score = 0;
+		if ( props.team == "T") {
+			score = 8;
 		}
+		else {
+			score = 12;
+		}
+		return (
+			<div class="h-100 h1 scorebox">
+				{ score }
+			</div>
+		)
+	}
+
+	roundTime() {
+		return (
+			<div class="h-100 h1">
+				2:34
+			</div>
+		)
+	}
+
+	seriesScore(props) {
+		return (
+			<div class="h-100">
+				{ props.won }/{ props.total }
+			</div>
+		)
+	}
+
+	roundNum(props) {
+		return (
+			<div class="h-100">
+				Round { props.round }/30
+			</div>
+		)
+	}
+
+	render() {
 
 		return (
 			<div class="container">
@@ -28,25 +72,25 @@ class MatchScore extends React.Component {
 					<div class="col-md-2"></div>
 					<div class="col-md-8">
 						<div class="row">
-							<div class="col-sm-4 color-scoreboard-plain text-right h2 teamtitle">
+							<div class="col-sm-4 color-scoreboard-plain text-right">
 								{/* CT Team Name */}
-								TEAM CT
+								<this.teamName team="CT"/>
 							</div>
-							<div class="col-sm-1 color-ct-side h1 scorebox">
+							<div class="col-sm-1 color-ct-side">
 								{/* CT Team Score */}
-								14
+								<this.teamScore team="CT"/>
 							</div>
-							<div class="col-sm-2 color-scoreboard-plain text-center align-self-center h1">
+							<div class="col-sm-2 color-scoreboard-plain text-center align-self-center">
 								{/* Round Time */}
-								2:34
+								<this.roundTime/>
 							</div>
-							<div class="col-sm-1 color-t-side h1 scorebox">
+							<div class="col-sm-1 color-t-side">
 								{/* T Team Score */}
-								15
+								<this.teamScore team="T"/>
 							</div>
-							<div class="col-sm-4 color-scoreboard-plain text-left h2 teamtitle">
+							<div class="col-sm-4 color-scoreboard-plain text-left">
 								{/* T Team Name */}
-								TEAM T
+								<this.teamName team="T"/>
 							</div>
 						</div>
 						<div class="row">
@@ -57,15 +101,15 @@ class MatchScore extends React.Component {
 								<div class="row">
 								<div class="col-sm-3 color-scoreboard-plain">
 									{/* Series Score T */}
-									1/3
+									<this.seriesScore won="1" total="5"/>
 								</div>
 								<div class="col-sm-6 color-scoreboard-plain text-center align-self-center">
 									{/* Round Number */}
-									Round 23/20
+									<this.roundNum round="23"/>
 								</div>
 								<div class="col-sm-3 color-scoreboard-plain">
 									{/* Series Score CT */}
-									1/3
+									<this.seriesScore won="2" total="5"/>
 								</div>
 								</div>
 								<div class="row">
@@ -81,7 +125,7 @@ class MatchScore extends React.Component {
 							</div>
 						</div>
 					</div></div>
-					<div class="col-md-2"></div>
+				<div class="col-md-2"></div>
 			</div>
 		)
 	}

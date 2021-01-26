@@ -39,7 +39,44 @@ class PlayerCard extends React.Component {
 	weapon() {
 		return (
 			<div class="h-100">
-				<img src={ ak47 }/> 23/56
+				<img src={ ak47 } alt="ak47"/> 23/56
+			</div>
+		)
+	}
+
+	health() {
+		return (
+			<div class="h-100 h2">
+				100 ❤️
+			</div>
+		)
+	}
+
+	kda() {
+		return (
+			<div class="h-100 h2 text-right">
+				K: 12 A: 2 D: 10
+			</div>
+		)
+	}
+
+	name() {
+		// Displays player name
+		return (
+			<div class="h-100 h1 text-left">
+				Player Name
+			</div>
+		)
+	}
+
+	gear() {
+		// Displays gear player has: kit, armor, bomb
+		return (
+			<div class="h-100 text-left">
+				{/* Kit */}
+				<img src={ kit } class="icon" alt="kit"/>
+				{/* Player helmet*/}
+				<img src={ armorhelmet } class="icon" alt="armor"/>
 			</div>
 		)
 	}
@@ -50,25 +87,22 @@ class PlayerCard extends React.Component {
 		return (
 			<div class="container">
 				<div class="row color-scoreboard-plain">
-					<div class="col-8 text-left h1 text-left tight">
+					<div class="col-8 tight">
 						{/* Player Name */}
-						Player Name
+						<this.name/>
 					</div>
-					<div class="col-4 h2 text-right tight">
+					<div class="col-4 tight">
 						{/* K/A/D */}
-						K: 12 A: 2 D: 10
+						<this.kda/>
 					</div>
 				</div>
 				<div class="row color-scoreboard-plain">
-					<div class="col-2 bg-primary text-left">
-						{/* Kit */}
-						<img src={ kit } class="icon"/>
-						{/* Player helmet*/}
-						<img src={ armorhelmet } class="icon"/>
+					<div class="col-2 bg-primary">
+						<this.gear/>
 					</div>
-					<div Class="col-2 bg-primary h2 tight">
+					<div Class="col-2 bg-primary tight">
 						{/* Player Health */}
-						100 ❤️
+						<this.health/>
 					</div>
 					<div class="col-5 bg-success h2 tight">
 						{/* Active Weapon */}
