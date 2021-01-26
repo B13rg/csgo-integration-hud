@@ -11,10 +11,9 @@ import '../css/bootstrap.css'
 import '../css/bootstrap-theme.css'
 
 /////////////////////////////////////////////////////////
-// Basic vertical re-flex layout with splitter
-// Adding a splitter between two ReflexElements
-// will allow the user to resize them
-//
+// Matchscore, meant to be displayed at the top of the screen
+// Reads primarily from the match object
+// Meant to be loaded into obs browser source, 1250px x 110px
 /////////////////////////////////////////////////////////
 class MatchScore extends React.Component {
 
@@ -29,23 +28,23 @@ class MatchScore extends React.Component {
 					<div class="col-md-2"></div>
 					<div class="col-md-8">
 						<div class="row">
-							<div class="col-sm-4 color-scoreboard-plain text-right">
+							<div class="col-sm-4 color-scoreboard-plain text-right h2 teamtitle">
 								{/* CT Team Name */}
 								TEAM CT
 							</div>
-							<div class="col-sm-1 color-ct-side">
+							<div class="col-sm-1 color-ct-side h1 scorebox">
 								{/* CT Team Score */}
 								14
 							</div>
-							<div class="col-sm-2 color-scoreboard-plain text-center align-self-center">
+							<div class="col-sm-2 color-scoreboard-plain text-center align-self-center h1">
 								{/* Round Time */}
 								2:34
 							</div>
-							<div class="col-sm-1 color-t-side">
+							<div class="col-sm-1 color-t-side h1 scorebox">
 								{/* T Team Score */}
 								15
 							</div>
-							<div class="col-sm-4 color-scoreboard-plain text-left">
+							<div class="col-sm-4 color-scoreboard-plain text-left h2 teamtitle">
 								{/* T Team Name */}
 								TEAM T
 							</div>
@@ -62,7 +61,7 @@ class MatchScore extends React.Component {
 								</div>
 								<div class="col-sm-6 color-scoreboard-plain text-center align-self-center">
 									{/* Round Number */}
-									23/20
+									Round 23/20
 								</div>
 								<div class="col-sm-3 color-scoreboard-plain">
 									{/* Series Score CT */}
