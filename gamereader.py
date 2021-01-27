@@ -70,6 +70,8 @@ def generatePlayerObj(inputData):
 	data['round_totaldmg'] = inputData['player']['state']['round_totaldmg']
 	data['equip_value'] = inputData['player']['state']['equip_value']
 	data['position'] = inputData['player']['position']
+
+	data['weapons'] = inputData['player']['weapons']
 	return data
 
 async def sendLoop(websocket, path):
@@ -81,10 +83,10 @@ async def sendLoop(websocket, path):
 		else:
 			item = dataQ.get()
 		gameDesc = {}
-		gameDesc['matchItem'] = generateMatchObj(item)
-		gameDesc['roundItem'] = generateRoundObj(item)
-		gameDesc['playerItem'] = generatePlayerObj(item)
-		gameDesc['matchItem']['timestamp'] = i
+		gameDesc['match'] = generateMatchObj(item)
+		gameDesc['round'] = generateRoundObj(item)
+		gameDesc['player'] = generatePlayerObj(item)
+		gameDesc['timestamp'] = i
 		i=i+1
 		await websocket.send(json.dumps(gameDesc))
 		if not NOINSTANCE:

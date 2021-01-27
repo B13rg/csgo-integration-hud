@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 import MatchScore from './components/MatchScore.js'
 import PlayerCard from './components/PlayerCard.js'
-import Example from './components/websocket.js'
+import DataSocket from './components/websocket.js'
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Switch>
           <Route path="/matchscore" exact component={() => <MatchScore />} />
           <Route path="/playercard" exact component={() => <PlayerCard />} />
-          <Route path="/ws" exact component={() => <Example/>} />
+          <Route path="/ws" exact component={() => <DataSocket/>} />
           <Route path="/" exact component={() => <PlayerCard />} />
         </Switch>
       </Router>
