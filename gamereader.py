@@ -89,7 +89,7 @@ async def sendLoop(websocket, path):
 		await websocket.send(json.dumps(gameDesc))
 		if not NOINSTANCE:
 			dataQ.task_done()
-		time.sleep(0.2)
+		await asyncio.sleep(0.2)
 
 serveThread = threading.Thread(target=startServer,name="server")
 serveThread.start()
