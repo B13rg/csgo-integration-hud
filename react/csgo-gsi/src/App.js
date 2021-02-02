@@ -20,20 +20,6 @@ function App() {
           <Route path="/" exact component={() => <PlayerCard />} />
         </Switch>
       </Router>
-      {/* <header className="App-header">
-        <div class="container">
-          <div class="row">
-          <MatchScore></MatchScore>
-          </div>
-          <div class="row">
-            <div class="col-3"></div>
-            <div class="col-5">
-              <PlayerCard></PlayerCard>
-            </div>
-            <div class="col-5"></div>
-          </div>
-        </div>
-      </header> */}
     </div>
   );
 }

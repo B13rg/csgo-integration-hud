@@ -1,0 +1,12 @@
+{
+  "name": "csgogui",
+  "version": "1.0.0",
+  "description": "A CS:GO Web Gui",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "B13rg",
+  "license": "ISC"
+}

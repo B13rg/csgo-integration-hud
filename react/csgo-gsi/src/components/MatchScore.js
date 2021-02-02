@@ -27,7 +27,7 @@ class MatchScore extends React.Component {
 
 	teamScore(props) {
 		var score = 0;
-		if ( props.team == "T") {
+		if ( props.team === "T") {
 			score = 8;
 		}
 		else {
